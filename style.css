@@ -1,9 +1,10 @@
 h1{
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: calc(50% + 40px);
     transform: translateY(-50%) translateX(-50%);
     color:#eee;
+    font-size: 50px;
     text-shadow: 0 0 15px #666;
     text-align: center;
 }
@@ -73,7 +74,7 @@ body {
     height: 100vh;
     /*背景画像設定*/
     background:url("Images/Nature.jpg") no-repeat center;
-    background-color:rgba(255,255,255,0);
+    background-color:rgba(255,255,255,0.25);
     background-blend-mode:lighten;
     background-size:cover;
 }
@@ -88,20 +89,10 @@ body {
     margin: 0%;
     text-align: center;
 }
-  
-
-@media screen and (max-width:768px) {
-
-    #header,
-    #header:before{
-  height: 90vh;    
-    }
-    
-}
 
 .scrolldown1 {
     position: absolute;
-    left: 50%;
+    left: calc(50% + 40px);
     bottom: 10px;
     height: 50px;
 }
@@ -218,7 +209,7 @@ body {
     z-index: -1;
     left: 0;
     top: 0;
-    width: 5%;
+    width: 80px;
     height: 100vh;
     background-color: #eee;
     border-right: 3px solid #FFCC29;
@@ -298,7 +289,7 @@ body {
 	position:fixed;
     z-index: 9999;
 	top:10px;
-	left: 10px;
+	left: 15px;
 	cursor: pointer;
     width: 50px;
     height:50px;
@@ -343,4 +334,25 @@ body {
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
+}
+
+@media screen and (max-width:768px) {
+
+    .scrolldown1 {
+        left: calc(50% + 25px);
+    }
+
+    h1 {
+        left: calc(50% + 25px);
+        font-size: 30px;        
+    }
+
+    .openbtn {
+	    left: 2px;
+    }
+
+    .line {
+        width: 50px;
+    }
+    
 }
