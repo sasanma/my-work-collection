@@ -82,10 +82,10 @@ body {
 #scrollpage{
     position: relative;
     z-index:1;
-    left: 5%;
-    width: 95%;
+    left: 80px;
+    width: calc(100% - 80px);
     background:#eee;
-    padding:600px 0;
+    padding:300px 0px;
     margin: 0%;
     text-align: center;
 }
@@ -337,6 +337,11 @@ body {
 }
 
 @media screen and (max-width:768px) {
+
+    #scrollpage {
+        left: 50px;
+        width: calc(100% - 50px);
+    }
 
     .scrolldown1 {
         left: calc(50% + 25px);
