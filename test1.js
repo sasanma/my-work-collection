@@ -31,16 +31,6 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 	$("#splash").fadeOut();//#splashエリアをフェードアウト
 });
 
-$(".openbtn").click(function () {//ボタンがクリックされたら
-	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
-});
-
-$("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-    $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
-    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
-});
-
 $('.slider').slick({
 	autoplay: false,//自動的に動き出すか。初期値はfalse。
 	infinite: true,//スライドをループさせるかどうか。初期値はtrue。
