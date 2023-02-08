@@ -53,27 +53,6 @@ h1{
     box-sizing: border-box;
 }
 
-.selected {
-    animation: attention 1s;
-}
-
-@keyframes attention{
-	0%{
-		height:0;
-		top:0;
-		opacity: 0;
-	}
-	30%{
-		height:30px;
-		opacity: 1;
-	}
-	100%{
-		height:30vh;
-        width: 30vh;
-		opacity: 1;
-	}
-}
-
 .card-image {
     width: 100%;
     height: auto;
@@ -107,7 +86,7 @@ h1{
 .popup {
     position: absolute;
     width: var(--popup-width);
-    height: auto;
+    max-height: 700px;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
@@ -117,14 +96,51 @@ h1{
     box-shadow: 0 0 20px #201f1f;
 }
 
-#download {
+.fadein { 
+    animation-fill-mode: forwards;
+    animation: fadein 0.7s ease-in-out;
+}
+
+@keyframes fadein{
+	0%{
+        left: 200%;
+		max-height:2vh;
+	}
+    
+    40%{
+        left: 50%;
+		max-height:2vh;
+	}
+
+	100%{
+		max-height: 70vh;
+	}
+}
+
+
+.button a {
+    opacity: 0;
     display: inline-block;
     position: relative;   
     width: 20vw;
+    max-width: 200px;
     height: auto;
     margin: 5% 0;
+    padding: 2% 7%;
+    cursor: pointer;
     text-align: center;
-    font-size: 2vw;
+    background-color: rgb(95, 156, 235);
+    border-radius: 30px;
+    filter: drop-shadow(0px 3px 5px #9e9d9d);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: #ffffff;
+}
+
+.button a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px -10px #201f1f;
 }
 
 
