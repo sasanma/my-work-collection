@@ -1,0 +1,23 @@
+{
+  "name": "my-work-collection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "base.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasanma/my-work-collection.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sasanma/my-work-collection/issues"
+  },
+  "homepage": "https://github.com/sasanma/my-work-collection#readme",
+  "dependencies": {
+    "@types/jquery": "^3.5.16"
+  }
+}
