@@ -10,7 +10,8 @@ $(".card").click(function() {
     });
     img.stop(false, false);
     $(".button").children("a").stop(false, false);
-    $(".button").children("a").css({opacity: "0"});
+    $(".button").children("a").css({opacity:"0"});
+    $(".button").children("a").attr("href", img.attr("src"));
     $(".attention").css({
         visibility: "visible"
     });
