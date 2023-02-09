@@ -1,5 +1,6 @@
 h1{
     position: absolute;
+    cursor: default;
     top: 50%;
     left: 50%;
     margin: 0%;
@@ -96,6 +97,7 @@ h1{
 
 .scrolldown1 span {
     position: absolute;
+    cursor: default;
     left: -23px;
     top: -23px;
     color: #eee;
