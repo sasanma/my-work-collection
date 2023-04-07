@@ -1,0 +1,126 @@
+:root {
+    --card-margin: 30px;    /* カード間の間隔 */
+    --popup-width: 60vw;    /* 拡大表示の幅 */
+}
+
+.card-group {
+    margin: 10% var(--card-margin);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-group > :not(:nth-child(3n - 2)){
+    margin-left: var(--card-margin);
+}
+
+.card-group > :nth-child(n + 4){
+    margin-top: var(--card-margin);
+}
+
+.card {
+    width: calc((100% - (var(--card-margin) * 2)) / 3);
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0 10px #666;
+    box-sizing: border-box;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-title-box {
+    display: table;
+    width: 100%;
+    height: 5vh;
+}
+
+.card-title {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.attention {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 2999;
+    background-color: #666666bc;
+}
+
+.popup {
+    position: absolute;
+    width: var(--popup-width);
+    max-height: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 5px;
+    background-color: #eee;
+    text-align: center;
+    box-shadow: 0 0 20px #201f1f;
+}
+
+.fadein { 
+    animation-fill-mode: forwards;
+    animation: fadein 0.7s ease-in-out;
+}
+
+@keyframes fadein{
+	0%{
+        left: 200%;
+		max-height:2vh;
+	}
+    
+    40%{
+        left: 50%;
+		max-height:2vh;
+	}
+
+	100%{
+		max-height: 100vh;
+	}
+}
+
+@media screen and (max-width:768px) {
+    :root {
+        --card-margin: 20px;    /* カード間の間隔 */
+        --popup-width: 80vw;    /* 拡大表示の幅 */
+    }
+
+    .card {
+        width: calc((100% - (var(--card-margin))) / 2);
+        padding: 4px;
+        box-sizing: border-box;
+    }
+
+    .card-title {
+        font-size: 15px;
+    }
+
+    /* 一行に2個ずつに変更 */
+    .card-group > :nth-child(2n){
+        margin-left: var(--card-margin);
+    }
+    .card-group > :not(:nth-child(2n)){
+        margin-left: 0%;
+    }
+    .card-group > :nth-child(n + 3){
+        margin-top: var(--card-margin);
+    }
+    .card-group > :not(:nth-child(n + 3)){
+        margin-top: 0%;
+    }        
+}
