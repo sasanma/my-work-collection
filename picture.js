@@ -8,6 +8,7 @@ $(".card").click(function() {
         width: "var(--popup-width)",
         height: "auto"
     });
+    img.removeClass("card-image");
     img.stop(false, false);
     $(".button").children("a").stop(false, false);
     $(".button").children("a").css({opacity:"0"});

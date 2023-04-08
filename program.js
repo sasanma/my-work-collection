@@ -6,7 +6,8 @@ $(".card").click(function() {
         opacity: "0",
         position: "relative",
         width: "var(--popup-width)",
-        height: "auto"
+        height: "auto",
+        "max-height": "50vh"
     });
     img.stop(false, false);
     $(".button").children("a").stop(false, false);

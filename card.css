@@ -31,7 +31,8 @@
 
 .card-image {
     width: 100%;
-    height: auto;
+    height: 28vh;
+    object-fit: contain;
 }
 
 .card-title-box {
@@ -129,6 +130,10 @@
         width: calc((100% - (var(--card-margin))) / 2);
         padding: 4px;
         box-sizing: border-box;
+    }
+
+    .card-image {
+        height: 12vh;
     }
 
     .card-title {
