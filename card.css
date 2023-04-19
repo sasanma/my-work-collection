@@ -1,156 +1,156 @@
 :root {
-    --card-margin: 30px;    /* カード間の間隔 */
-    --popup-width: 60vw;    /* 拡大表示の幅 */
+	--card-margin: 30px; /* カード間の間隔 */
+	--popup-width: 60vw; /* 拡大表示の幅 */
 }
 
 .card-group {
-    margin: 10% var(--card-margin);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+	margin: 10% var(--card-margin);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
-.card-group > :not(:nth-child(3n - 2)){
-    margin-left: var(--card-margin);
+.card-group > :not(:nth-child(3n - 2)) {
+	margin-left: var(--card-margin);
 }
 
-.card-group > :nth-child(n + 4){
-    margin-top: var(--card-margin);
+.card-group > :nth-child(n + 4) {
+	margin-top: var(--card-margin);
 }
 
 .card {
-    width: calc((100% - (var(--card-margin) * 2)) / 3);
-    padding: 5px;
-    background-color: white;
-    cursor: pointer;
-    text-align: center;
-    box-shadow: 0 0 10px #666;
-    box-sizing: border-box;
+	width: calc((100% - (var(--card-margin) * 2)) / 3);
+	padding: 5px;
+	background-color: white;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: 0 0 10px #666;
+	box-sizing: border-box;
 }
 
 .card-image {
-    width: 100%;
-    height: 28vh;
-    object-fit: contain;
+	width: 100%;
+	height: 28vh;
+	object-fit: contain;
 }
 
 .card-title-box {
-    display: table;
-    width: 100%;
-    height: 5vh;
+	display: table;
+	width: 100%;
+	height: 5vh;
 }
 
 .card-title {
-    display: table-cell;
-    width: 100%;
-    vertical-align: middle;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
 }
 
 .attention {
-    visibility: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    z-index: 2999;
-    background-color: #666666bc;
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	z-index: 2999;
+	background-color: #666666bc;
 }
 
 .button a {
-    opacity: 0;
-    display: inline-block;
-    position: relative;   
-    width: 20vw;
-    max-width: 220px;
-    height: auto;
-    margin: 5% 0;
-    padding: 2% 7%;
-    cursor: pointer;
-    text-align: center;
-    background-color: rgb(95, 156, 235);
-    border-radius: 30px;
-    filter: drop-shadow(0px 3px 5px #9e9d9d);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2.5vw;
-    color: #ffffff;
+	opacity: 0;
+	display: inline-block;
+	position: relative;
+	width: 20vw;
+	max-width: 220px;
+	height: auto;
+	margin: 5% 0;
+	padding: 2% 7%;
+	cursor: pointer;
+	text-align: center;
+	background-color: rgb(95, 156, 235);
+	border-radius: 30px;
+	filter: drop-shadow(0px 3px 5px #9e9d9d);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 2.5vw;
+	color: #ffffff;
 }
 
 .button a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 10px -10px #201f1f;
+	transform: translateY(-3px);
+	box-shadow: 0 10px 10px -10px #201f1f;
 }
 
 .popup {
-    position: absolute;
-    width: var(--popup-width);
-    max-height: 800px;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    padding: 5px;
-    background-color: #eee;
-    text-align: center;
-    box-shadow: 0 0 20px #201f1f;
+	position: absolute;
+	width: var(--popup-width);
+	max-height: 800px;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	padding: 5px;
+	background-color: #eee;
+	text-align: center;
+	box-shadow: 0 0 20px #201f1f;
 }
 
-.fadein { 
-    animation-fill-mode: forwards;
-    animation: fadein 0.7s ease-in-out;
+.fadein {
+	animation-fill-mode: forwards;
+	animation: fadein 0.7s ease-in-out;
 }
 
-@keyframes fadein{
-	0%{
-        left: 200%;
-		max-height:2vh;
-	}
-    
-    40%{
-        left: 50%;
-		max-height:2vh;
+@keyframes fadein {
+	0% {
+		left: 200%;
+		max-height: 2vh;
 	}
 
-	100%{
+	40% {
+		left: 50%;
+		max-height: 2vh;
+	}
+
+	100% {
 		max-height: 100vh;
 	}
 }
 
-@media screen and (max-width:768px) {
-    :root {
-        --card-margin: 20px;    /* カード間の間隔 */
-        --popup-width: 80vw;    /* 拡大表示の幅 */
-    }
+@media screen and (max-width: 768px) {
+	:root {
+		--card-margin: 20px; /* カード間の間隔 */
+		--popup-width: 80vw; /* 拡大表示の幅 */
+	}
 
-    .card {
-        width: calc((100% - (var(--card-margin))) / 2);
-        padding: 4px;
-        box-sizing: border-box;
-    }
+	.card {
+		width: calc((100% - (var(--card-margin))) / 2);
+		padding: 4px;
+		box-sizing: border-box;
+	}
 
-    .card-image {
-        height: 12vh;
-    }
+	.card-image {
+		height: 12vh;
+	}
 
-    .card-title {
-        font-size: 15px;
-    }
+	.card-title {
+		font-size: 15px;
+	}
 
-    /* 一行に2個ずつに変更 */
-    .card-group > :nth-child(2n){
-        margin-left: var(--card-margin);
-    }
-    .card-group > :not(:nth-child(2n)){
-        margin-left: 0%;
-    }
-    .card-group > :nth-child(n + 3){
-        margin-top: var(--card-margin);
-    }
-    .card-group > :not(:nth-child(n + 3)){
-        margin-top: 0%;
-    }        
+	/* 一行に2個ずつに変更 */
+	.card-group > :nth-child(2n) {
+		margin-left: var(--card-margin);
+	}
+	.card-group > :not(:nth-child(2n)) {
+		margin-left: 0%;
+	}
+	.card-group > :nth-child(n + 3) {
+		margin-top: var(--card-margin);
+	}
+	.card-group > :not(:nth-child(n + 3)) {
+		margin-top: 0%;
+	}
 }
