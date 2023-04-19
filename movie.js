@@ -2,7 +2,8 @@ var img; //選択画像
 var id; //setTimeoutのid
 
 $(".card").click(function () {
-	img = $(this).children("img").clone().prependTo(".popup").css({
+	img = $(this).children("video").clone().prependTo(".popup").css({
+		display: "inline",
 		opacity: "0",
 		position: "relative",
 		width: "var(--popup-width)",
@@ -13,7 +14,7 @@ $(".card").click(function () {
 	$(".button").children("a").stop(false, false);
 	$(".button").children("a").css({ opacity: "0" });
 	$(".button").children("a").attr("href", img.attr("src"));
-	$(".attention").css({
+	$(".attention, .back").css({
 		visibility: "visible",
 	});
 	$(".popup").addClass("fadein");
@@ -23,11 +24,11 @@ $(".card").click(function () {
 	}, 500);
 });
 
-$(".attention").click(function () {
+$(".back").click(function () {
 	clearTimeout(id);
 	img.remove();
 	$(".popup").removeClass("fadein");
-	$(".attention").css({
+	$(".attention, .back").css({
 		visibility: "hidden",
 	});
 });

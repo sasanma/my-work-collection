@@ -10,6 +10,19 @@
 	background-size: cover;
 }
 
+.src_movie {
+	display: none;
+}
+
+.back {
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+}
+
 @media screen and (max-width: 768px) {
 	#header {
 		height: 40vh;
