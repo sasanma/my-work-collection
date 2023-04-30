@@ -7,13 +7,15 @@ $(".card").click(function () {
 		position: "relative",
 		width: "var(--popup-width)",
 		height: "auto",
-		"max-height": "50vh",
+		"max-height": "50vh"
 	});
 	img.stop(false, false);
 	$(".button").children("a").stop(false, false);
 	$(".button").children("a").css({ opacity: "0" });
+
+	$(".button").children("a").attr("href", $(this).children("a.element").attr("href"));
 	$(".attention").css({
-		visibility: "visible",
+		visibility: "visible"
 	});
 	$(".popup").addClass("fadein");
 	id = setTimeout(function () {
@@ -27,6 +29,6 @@ $(".attention").click(function () {
 	img.remove();
 	$(".popup").removeClass("fadein");
 	$(".attention").css({
-		visibility: "hidden",
+		visibility: "hidden"
 	});
 });
